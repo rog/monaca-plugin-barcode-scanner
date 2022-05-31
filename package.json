@@ -1,5 +1,5 @@
 {
-  "name": "monaca-plugin-barcode-scanner",
+  "name": "@monaca/monaca-plugin-barcode-scanner",
   "version": "1.0.0",
   "description": "Monaca Barcode Scanner Plugin",
   "cordova": {
@@ -23,7 +23,7 @@
     "cordova-android"
   ],
   "author": "Asial Corporation",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/monaca-plugins/monaca-plugin-barcode-scanner/issues"
   },
