@@ -102,7 +102,12 @@ To add these entries ito the `info.plist`, you can use the `<edit-config>` tag i
 ## Android Quirks
 
 The library `androidx.camera:camera-view` used internally requires `compileSDKVersion>=31`.
-So `Target SDK Version` of `Android Application setting` in Monaca Cloud IDE should be set 31 or above.
+
+To specify the compileSdkVersion in Cordova, you should set `android-targetSdkVersion` by using the `<preference>` tag in the `config.xml` file like this:
+
+```
+<preference name="android-targetSdkVersion" value="31" />
+```
 
 ## License
 
