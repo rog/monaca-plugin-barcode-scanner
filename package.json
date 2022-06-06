@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Monaca Barcode Scanner Plugin",
   "cordova": {
-    "id": "monaca-plugin-barcode-scanner",
+    "id": "@monaca/monaca-plugin-barcode-scanner",
     "platforms": [
       "ios",
       "android"

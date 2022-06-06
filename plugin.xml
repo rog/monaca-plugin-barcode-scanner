@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="@monaca/monaca-plugin-barcode-scanner" version="1.0.0" >
-  <name>MonacaBarcodeScannerPlugin</name>
+  <name>@monaca/monaca-plugin-barcode-scanner</name>
   <description>MonacaBarcodeScannerPlugin</description>
-  <author>Asial</author>
-  <license>Asial LICENSE</license>
+  <author>Asial Corporation</author>
+  <license>Apache-2.0</license>
   <engines>
     <engine name="cordova" version=">=11.0.0"/>
   </engines>
