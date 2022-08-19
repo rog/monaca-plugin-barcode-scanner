@@ -93,7 +93,7 @@ error: error message(string)
 |oneShot|boolean|false|Enable or disable One Shot mode.|
 |timeoutPrompt.show|boolean|false|Show or hide detection timeout message.|
 |timeoutPrompt.timeout|int|-|Period(in seconds) from when the barcode not detected until the message is displayed.|
-|timeoutPrompt.message|string|"Barcode not detected"|Timeout message.|
+|timeoutPrompt.prompt|string|"Barcode not detected"|Timeout message.|
 
 ## Example
 
