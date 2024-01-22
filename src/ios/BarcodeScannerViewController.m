@@ -425,7 +425,8 @@ NSString* timeoutPrompt;
     // 読み取りたいバーコードの種類を指定
     [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     [output setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode, AVMetadataObjectTypeEAN13Code,
-        AVMetadataObjectTypeEAN8Code,
+        AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode39Mod43Code, AVMetadataObjectTypeCode93Code,
+		AVMetadataObjectTypeCode128Code, 
         AVMetadataObjectTypeITF14Code]];
     
     // 検出エリアの設定
@@ -470,7 +471,11 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         NSString *barcodeDataStr = [(AVMetadataMachineReadableCodeObject *)data stringValue];
         if ([data.type isEqualToString:AVMetadataObjectTypeQRCode]
             || [data.type isEqualToString:AVMetadataObjectTypeEAN13Code]
-            || [data.type isEqualToString:AVMetadataObjectTypeEAN8Code]
+            || [data.type isEqualToString:AVMetadataObjectTypeEAN8Code]			
+			|| [data.type isEqualToString:AVMetadataObjectTypeCode39Code]
+			|| [data.type isEqualToString:AVMetadataObjectTypeCode39Mod43Code]
+			|| [data.type isEqualToString:AVMetadataObjectTypeCode93Code]
+			|| [data.type isEqualToString:AVMetadataObjectTypeCode128Code]
             || [data.type isEqualToString:AVMetadataObjectTypeITF14Code]) {
 
             self.detectedText = barcodeDataStr;
@@ -527,7 +532,15 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     } else if (type == AVMetadataObjectTypeEAN8Code) {
         format = @"EAN_8";
     } else if (type == AVMetadataObjectTypeEAN13Code) {
-        format = @"EAN_13";
+        format = @"EAN_13";		
+} else if (type == AVMetadataObjectTypeCode39Code) {
+        format = @"EAN_39";
+} else if (type == AVMetadataObjectTypeCode39Mod43Code) {
+        format = @"EAN_39_43";
+} else if (type == AVMetadataObjectTypeCode93Code) {
+        format = @"EAN_93";
+} else if (type == AVMetadataObjectTypeCode128Code) {
+        format = @"EAN_128";		
     } else if (type == AVMetadataObjectTypeITF14Code) {
         format = @"ITF";
     }
